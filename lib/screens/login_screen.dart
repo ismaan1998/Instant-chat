@@ -1,10 +1,11 @@
+import 'package:flash_chat/screens/chat_screen.dart';
 import 'package:flash_chat/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import '../constants.dart';
 
 class LoginScreen extends StatefulWidget {
-
   static const String id = 'login_screen';
 
   @override
@@ -12,6 +13,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final _auth = FirebaseAuth.instance;
+
+  String email;
+  String password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,9 +42,10 @@ class _LoginScreenState extends State<LoginScreen> {
               keyboardType: TextInputType.emailAddress,
               textAlign: TextAlign.center,
               onChanged: (value) {
-                //Do something with the user input.
+                email = value;
               },
-              decoration: kTextFieldInputDecoration.copyWith(hintText:"Enter your email"),
+              decoration: kTextFieldInputDecoration.copyWith(
+                  hintText: "Enter your email"),
             ),
             SizedBox(
               height: 8.0,
@@ -47,16 +54,26 @@ class _LoginScreenState extends State<LoginScreen> {
               obscureText: true,
               textAlign: TextAlign.center,
               onChanged: (value) {
-                //Do something with the user input.
+                password = value;
               },
-              decoration: kTextFieldInputDecoration.copyWith(hintText: "Enter your password"),
+              decoration: kTextFieldInputDecoration.copyWith(
+                  hintText: "Enter your password"),
             ),
             SizedBox(
               height: 24.0,
             ),
-            RoundedButton(text: "Login", color: Colors.lightBlueAccent, function:(){
-              // needed to implement login functionality
-            }),
+            RoundedButton(
+                text: "Login",
+                color: Colors.lightBlueAccent,
+                function: () async{
+                  try{
+                      final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
+                      if(user != null){
+                        Navigator.pushNamed(context, ChatScreen.id);
+                      }}catch(e){
+                        print(e);
+                  }
+                }),
           ],
         ),
       ),
