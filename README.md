@@ -10,4 +10,4 @@
  - Working with Custom animation using ticker and animation controller.
  - Working with CurvedAnimation, ColorTween 
  - Working with different keyboards while inputting text inside textfields
- 
+ - Working with ModalProgressHUD
