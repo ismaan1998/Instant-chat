@@ -11,3 +11,5 @@
  - Working with CurvedAnimation, ColorTween 
  - Working with different keyboards while inputting text inside textfields
  - Working with ModalProgressHUD
+ - listening to data changes using snapshots from firebase
+ 
