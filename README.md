@@ -8,9 +8,9 @@ Learned from a course by  <a href="https://github.com/angelabauer"> Angela Yu</a
 
 <h2> Screenshots-</h2><br>
 <div>
-<img src="screenshot1.png"  width=250, height=512, style="display:inline-block;">
-<img src="screenshot2.png"  width=250, height=512, style="display:inline-block;">
-<img src="demo.gif"  width=250, height=512, style="display:inline-block;">
+<img src="screenshot/screenshot1.PNG"  width=250, height=512, style="display:inline-block;">
+<img src="screenshot/screenshot2.PNG"  width=250, height=512, style="display:inline-block;">
+<img src="screenshot/demo.gif"  width=250, height=512, style="display:inline-block;">
 
 </div>
 
