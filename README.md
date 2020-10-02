@@ -11,6 +11,7 @@ Learned from a course by  <a href="https://github.com/angelabauer"> Angela Yu</a
 <img src="screenshots/screenshot1.PNG"  width=250, height=512, style="display:inline-block;">
 <img src="screenshots/screenshot2.PNG"  width=250, height=512, style="display:inline-block;">
 <img src="screenshots/demo.gif"  width=250, height=512, style="display:inline-block;">
+<img src="screenshots/demo2.gif"  width=250, height=512, style="display:inline-block;">
 
 </div>
 
